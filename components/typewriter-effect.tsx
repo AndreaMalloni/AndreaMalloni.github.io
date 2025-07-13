@@ -17,16 +17,12 @@ export function TypewriterEffect({ greeting, name, speed = 100, delayAfterGreeti
   const [isComplete, setIsComplete] = useState(false)
 
   useEffect(() => {
-    let timeout: NodeJS.Timeout
-
     // Reset animation when greeting or name changes (e.g., language change)
     setDisplayedGreeting("")
     setDisplayedName("")
     setIsTypingGreeting(true)
     setIsTypingName(false)
     setIsComplete(false)
-
-    return () => clearTimeout(timeout)
   }, [greeting, name])
 
   useEffect(() => {
