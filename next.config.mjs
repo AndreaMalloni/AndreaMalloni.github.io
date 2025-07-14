@@ -25,6 +25,9 @@ const nextConfig = {
 
 mergeConfig(nextConfig, userConfig)
 
+// Aggiungi la proprietà output: 'export' a nextConfig
+nextConfig.output = 'export'
+
 function mergeConfig(nextConfig, userConfig) {
   if (!userConfig) {
     return
